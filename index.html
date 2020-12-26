@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/superhero/bootstrap.min.css">
+    <style>
+        .searchnews,#Headlines{
+            display: none;
+        }
+    </style>
+    <title>Daily News</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h2 class="p-2">Daily News</h2>
+        <button type="button" class="btn btn-primary" id="Search">Search News</button>
+        <button type="button" class="btn btn-primary" id="Headlines">Top Headlines</button>
+    </nav>
+
+    <!--Headlines-->
+
+    <div class="container">
+        <div class="jumbotron mt-3 headlines">
+            <h1 class="display-3">Top Headlines</h1>
+            <p>Select the Any Category of News</p>
+
+           <form class="form-group" id="submitHeadlines">
+            <select class="form-control" id="selectHeadlines">
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="general">General</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+            </select>
+            <button class="btn btn-primary mt-3">Search</button>
+           </form>
+             </div>
+
+          <!--SearhNews-->
+          <div class="jumbotron mt-3 searchnews">
+            <h1 class="display-3">Search News</h1>
+            <p>Search Any News</p>
+
+           <form class="form-group" id="submitSearch">
+            <input type="text" class="form-control" id="selectSearch">
+            <button class="btn btn-primary mt-3">Search</button>
+           </form>
+          </div>
+
+          <div id="results">
+            <div class="card">
+                <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+                  </svg>
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="btn btn-primary">Another link</a>
+                  </div>
+          </div>
+    </div>
+
+
+    <script src="newsapi.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
